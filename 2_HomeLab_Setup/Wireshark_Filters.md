@@ -1,176 +1,148 @@
-# Wireshark Display Filters & Traffic Analysis Reference
+# Wireshark Display Filters
 
-Wireshark is a core tool for cybersecurity analysts. Display filters allow you to isolate packets, investigate alerts, and understand network behavior quickly. This page summarizes commonly used filters, when to apply them, and short analysis examples you can replicate in a home lab.
-
----
-
-## Overview
-
-This reference covers:
-
-- Essential Wireshark display filters  
-- Protocol-based filters  
-- Investigation-focused filters  
-- Practical examples for a home lab  
-- A quick-reference table  
+This document provides a reference for commonly used Wireshark display filters. These filters help narrow traffic during packet analysis, troubleshooting, and SOC investigations.
 
 ---
 
-# 1. Essential Filters
+## 1. Filtering by IP Address
 
-### **Filter: `ip.addr == x.x.x.x`**  
-Shows all traffic to or from a specific IP address.
+### Single IP (source or destination)
+ip.addr == 192.168.1.10
 
-**Use cases:** device scoping, suspicious communication, east/west movement.
+### Source IP only
+ip.src == 192.168.1.10
 
----
+### Destination IP only
+ip.dst == 192.168.1.10
 
-### **Filter: `tcp.port == 80`**  
-Shows packets on a specific TCP port.
-
-**Use cases:** investigating service behavior, analyzing clear-text traffic.
-
----
-
-### **Filter: `http`**  
-Displays HTTP traffic.
-
-**Use cases:** reviewing web requests, analyzing insecure logins.
+### Exclude an IP
+!(ip.addr == 192.168.1.1)
 
 ---
 
-### **Filter: `dns`**  
-Shows DNS queries and responses.
+## 2. Filtering by Protocol
 
-**Use cases:** suspicious domains, C2 behavior, typosquatting.
-
----
-
-# 2. Protocol-Specific Filters
-
-### Common Network Protocols
-
-| Filter | Purpose |
-|--------|---------|
-| `tcp` | All TCP packets |
-| `udp` | All UDP packets |
-| `icmp` | Ping and diagnostic traffic |
-| `tls` | Encrypted TLS traffic |
-| `ftp` | FTP sessions (clear-text) |
-| `ssh` | Encrypted remote shell traffic |
-
----
-
-### Email & Authentication Protocols
-
-| Filter | Purpose |
-|--------|---------|
-| `smtp` | Outbound email |
-| `imap` | Email retrieval |
-| `pop3` | Legacy email retrieval |
-| `kerberos` | Windows authentication |
-| `ntlmssp` | NTLM authentication traffic |
-
----
-
-# 3. Investigation-Focused Filters
-
-These filters are commonly used in SOC investigations and IR workflows.
-
----
-
-### **Filter: `tcp.flags.syn == 1 && tcp.flags.ack == 0`**  
-Shows SYN packets that initiate connections.
-
-**Use cases:** port scans, connection attempts, recon activity.
-
----
-
-### **Filter: `tcp.analysis.retransmission`**  
-Displays retransmitted packets.
-
-**Use cases:** troubleshooting network issues, identifying packet loss.
-
----
-
-### **Filter: `frame contains "password"`**  
-Searches packet payloads for a string.
-
-**Use cases:**  
-Home lab testing only — confirms clear-text credential exposure.
-
----
-
-### **Filter: `dns.qry.name contains ".xyz"`**  
-Shows DNS queries for a specific TLD.
-
-**Use cases:** tracking unusual TLD lookups, malware behavior.
-
----
-
-# 4. Quick Analysis Scenarios (Home Lab Friendly)
-
-These scenarios demonstrate real-world packet analysis skills.
-
----
-
-### Scenario A — Detect a Basic Port Scan  
-**Filter:**  
-```
-tcp.flags.syn == 1 && tcp.flags.ack == 0
-```
-
-**Expected pattern:**  
-Repeated SYN packets to many ports from the same source.
-
----
-
-### Scenario B — Identify Clear-Text Credentials  
-**Filters:**  
-```
-http.request.method == "POST"
-frame contains "username"
-```
-
-**Expected pattern:**  
-Form submissions or visible credentials in clear-text.
-
----
-
-### Scenario C — Investigate Suspicious DNS Behavior  
-**Filter:**  
-```
+### Common protocol filters
+http
 dns
-dns.qry.name contains "amazonaws"
-```
+tcp
+udp
+icmp
+tls
 
-**Expected pattern:**  
-High-frequency DNS lookups, possible C2 traffic.
-
----
-
-# 5. Quick Reference Table
-
-```
-+---------------------------+--------------------------------------------+
-| Filter                    | Description                                |
-+---------------------------+--------------------------------------------+
-| ip.addr == x.x.x.x        | All traffic to/from an IP                  |
-| tcp.port == 80            | Traffic on TCP port 80                     |
-| udp.port == 53            | DNS (UDP) traffic                          |
-| http                      | All HTTP packets                           |
-| dns                       | DNS queries and responses                  |
-| tls                       | TLS handshake & encrypted traffic          |
-| icmp                      | Ping / diagnostic packets                  |
-| ftp                       | FTP traffic (clear-text)                   |
-| tcp.flags.syn == 1        | SYN packets (scan/recon indicator)         |
-| frame contains "string"   | Search payloads for specified text         |
-+---------------------------+--------------------------------------------+
-```
+### Combine protocol and IP
+http && ip.addr == 10.0.0.15
 
 ---
 
-# Summary
+## 3. Filtering by Port
 
-This document provides a clean, hybrid-level overview of Wireshark display filters and basic packet analysis techniques. These examples can be expanded later with screenshots, PCAPs, or walkthroughs from lab work and TryHackMe exercises.
+### TCP port
+tcp.port == 80
 
+### UDP port
+udp.port == 53
+
+### Source port
+tcp.srcport == 443
+
+### Destination port
+tcp.dstport == 22
+
+---
+
+## 4. HTTP Filters
+
+### HTTP GET requests
+http.request.method == "GET"
+
+### HTTP POST requests
+http.request.method == "POST"
+
+### Filter for a specific host header
+http.host == "example.com"
+
+### User-Agent field contains a string
+http.user_agent contains "Mozilla"
+
+---
+
+## 5. DNS Filters
+
+### All DNS traffic
+dns
+
+### DNS query name contains a string
+dns.qry.name contains "google.com"
+
+### DNS response errors
+dns.flags.rcode != 0
+
+---
+
+## 6. TCP Filters
+
+### Show packets with retransmissions
+tcp.analysis.retransmission
+
+### Show TCP resets
+tcp.flags.reset == 1
+
+### Show SYN packets (start of handshake)
+tcp.flags.syn == 1
+
+### Show SYN/ACK packets
+tcp.flags.syn == 1 && tcp.flags.ack == 1
+
+---
+
+## 7. Error and Warning Filters
+
+### Malformed packets
+malformed
+
+### TCP checksum errors
+tcp.checksum_bad == 1
+
+### TLS handshake failures
+tls.handshake && tls.record.content_type == 21
+
+---
+
+## 8. SOC Investigation Examples
+
+### 1. Filter all traffic from a suspicious internal host
+ip.addr == 10.0.5.23
+
+### 2. Look for failed DNS lookups from that host
+dns.flags.rcode != 0 && ip.addr == 10.0.5.23
+
+### 3. Filter for unusual outbound connections (non-443, non-80)
+tcp.dstport != 80 && tcp.dstport != 443 && tcp
+
+### 4. Detect possible C2 beaconing by filtering periodic small packets
+frame.len < 100 && tcp
+
+### 5. Filter failed TLS handshakes from the same host
+tls.record.content_type == 21 && ip.addr == 10.0.5.23
+
+---
+
+## 9. Quick Reference Table
+
+| Purpose               | Filter                             |
+|-----------------------|------------------------------------|
+| Any traffic for an IP | `ip.addr == X.X.X.X`               |
+| DNS queries           | `dns.qry.name contains "example"`  |
+| HTTP GET              | `http.request.method == "GET"`     |
+| HTTPS/TLS             | `tls`                              |
+| Failed DNS lookup     | `dns.flags.rcode != 0`             |
+| TCP retransmissions   | `tcp.analysis.retransmission`      |
+| Packet length filter  | `frame.len > 500`                  |
+| Exclude noisy traffic | `!(ip.addr == X.X.X.X)`            |
+
+---
+
+## Summary
+
+These filters provide a foundation for targeted packet analysis in SOC workflows, incident investigations, and network troubleshooting. They can be combined to narrow traffic to specific hosts, protocols, or behaviors.
