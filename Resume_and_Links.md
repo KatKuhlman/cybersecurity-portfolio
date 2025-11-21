@@ -3,7 +3,7 @@
 This page provides quick access to my resume and professional profiles.
 
 ## 📄 Resume
-[Click here to view/download my resume](https://github.com/KatKuhlman/cybersecurity-portfolio/blob/main/Resume%2010-27-25.pdf)
+[Click here to view/download my resume](./1_Certifications/Kathleen_Kuhlman_Resume.pdf)
 
 ## 🔗 Professional Links
 **LinkedIn:**  
