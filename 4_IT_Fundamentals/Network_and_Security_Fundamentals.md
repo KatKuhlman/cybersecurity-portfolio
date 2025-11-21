@@ -169,7 +169,7 @@ This structure applies to network, endpoint, and application troubleshooting ali
 ---
 
 ## 9. Basic Layered Diagram (Conceptual Stack)
-
+```
 +-------------------------+
 | Applications            |
 +-------------------------+
@@ -181,7 +181,7 @@ This structure applies to network, endpoint, and application troubleshooting ali
 +-------------------------+
 | Physical Hardware       |
 +-------------------------+
-
+```
 This simplified view helps frame where issues occur when troubleshooting.
 
 ---
