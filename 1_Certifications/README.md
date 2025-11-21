@@ -1,22 +1,36 @@
-# Certifications
+# 📜 Certifications
 
-This folder contains cybersecurity certificates, course completions, and study documentation.
+This folder contains completed certifications, verification documents, and the most up-to-date version of my professional resume.
 
-## 📜 Completed Certifications
+---
+
+## ✅ Completed Certifications
 - **Cisco Introduction to Cybersecurity**  
-  [View Certificate](https://github.com/KatKuhlman/cybersecurity-portfolio/blob/main/Certifications/CISCO%20Intro%20to%20Cybersecurity.pdf)
+  📄 [View Certificate](./CISCO%20Intro%20to%20Cybersecurity.pdf)
+
+---
+
+## 📝 Resume  
+- **Kathleen Kuhlman – Professional Resume**  
+  📄 [Open Resume](./Kathleen_Kuhlman_Resume.pdf)
+
+---
 
 ## 📚 In Progress
-- **Cisco Networking Basics**
-- **UNLV Cybersecurity Bootcamp**
+- **Cisco Networking Basics**  
+- **UNLV Cybersecurity Bootcamp Certificate**
+
+---
 
 ## 🎯 Planned Certifications
-- **CompTIA Security+**
+- **CompTIA Security+**  
 - **CompTIA CySA+**
 
-## 📝 Documentation Included
-- PDF copies or screenshots of certificates  
-- Notes and key concepts learned  
-- Study outlines and progress tracking  
+---
 
-This section helps demonstrate ongoing professional development and verified technical training.
+## 📂 Folder Contents  
+- Official PDF certificates  
+- Resume  
+- Notes and study outlines as they become available
+
+This folder helps demonstrate verified technical training, active skill progression, and professional development toward cybersecurity roles.
