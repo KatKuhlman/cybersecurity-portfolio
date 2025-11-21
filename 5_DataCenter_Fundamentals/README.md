@@ -1,31 +1,24 @@
 # Data Center Fundamentals
 
-This section provides concise, job-ready references for core data center technician knowledge.  
-It is designed to help with interviews, hands-on tasks, and foundational understanding of physical infrastructure.
+This folder contains documentation outlining key physical and infrastructure concepts used in data center operations. The material provides foundational knowledge relevant to hardware installation, cabling, storage, power systems, cooling, and technician workflows.
 
-## 📁 Included Document
+---
 
-- **[DataCenter_Fundamentals.md](./DataCenter_Fundamentals.md)**  
-  Overview of essential data center concepts including cabling standards, rack hardware, networking interfaces, power systems, environmental controls, and technician best practices.
+## Document in This Folder
 
-## 🎯 Purpose
-Data centers rely on highly organized, reliable, and secure physical infrastructure.  
-This documentation covers the critical concepts a Data Center Technician is expected to understand, including:
+### 1. Data Center Fundamentals  
+**File:** [DataCenter_Fundamentals.md](./DataCenter_Fundamentals.md)  
+- Covers cabling standards, fiber types, connectors, rack units, airflow design, networking interfaces, RAID storage concepts, power and cooling systems, technician responsibilities, safety practices, and troubleshooting logic. Includes ASCII diagrams and structured references.
 
-- Cable types and connectors  
-- Rack units and physical server installation  
-- Switches, routers, and port configurations  
-- Storage basics (SAN/NAS, RAID)  
-- Power, cooling, and hardware lifecycle tasks  
-- Troubleshooting workflows and safety practices  
+---
 
-## 🛠 Ideal For
-- Data Center Technician roles  
-- Infrastructure & hardware support positions  
-- Anyone preparing for on-premises systems work  
-- IT professionals transitioning toward cybersecurity or cloud roles  
+## Purpose of This Folder
 
-## 🔗 Related Sections
-- [`2_HomeLab_Setup`](../2_HomeLab_Setup) – Virtualization, networking, and lab environment design  
-- [`3_SOC_Practice`](../3_SOC_Practice) – Logging, monitoring, and alert triage  
-- [`1_Certifications`](../1_Certifications) – Training and certs relevant to infrastructure and cybersecurity  
+The content in this directory supports:
+
+- Preparing for data center technician roles  
+- Understanding physical IT infrastructure  
+- Learning core concepts behind rack-mounted hardware, cabling, and environmental controls  
+- Providing foundational knowledge for hands-on work in hardware-focused environments  
+
+This section reinforces skills that complement networking, home lab work, and general IT fundamentals, forming a complete baseline for roles involving physical systems and infrastructure.
