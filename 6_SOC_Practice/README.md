@@ -1,43 +1,24 @@
-# SOC & Blue Team Practice
+# SOC Practice
 
-This folder contains hands-on exercises focused on log analysis, alert investigation, incident documentation, and foundational SOC workflows.
-
-## 🛡 Focus Areas
-
-### **🔎 Log Analysis**
-- Windows Event Logs (Security, System, Application)
-- Sysmon event investigation
-- Linux auth logs and syslogs
-- Identifying suspicious processes, persistence mechanisms, and anomalous activity
-
-### **📨 Alert Triage & Investigation**
-- Evaluating alerts for severity, scope, and impact
-- Mapping behaviors to MITRE ATT&CK techniques
-- Documenting findings in structured analysis format
-- Distinguishing false positives from true positives
-
-### **📊 SIEM Concepts**
-- Searching and filtering logs
-- Correlation rule fundamentals
-- Detecting repeated login failures, privilege escalation attempts, and network anomalies
-- Understanding log sources and event enrichment
-
-### **📁 Incident Documentation**
-- Investigation notes
-- Timeline reconstruction
-- Screenshots of artifacts (safely redacted)
-- Summary and recommended remediation steps
+This folder contains documents focused on practical Security Operations Center (SOC) skills. The material is designed to demonstrate hands-on analysis, investigative workflows, and security reasoning used in entry-level SOC and blue-team roles.
 
 ---
 
-## 📚 Documentation Included
-This folder will eventually store:
+## Documents in This Folder
 
-- Case studies  
-- Investigation write-ups  
-- Alert triage walk-throughs  
-- Log analysis examples  
-- MITRE ATT&CK mappings  
-- Lessons learned  
+### 1. Email Header Analysis  
+**File:** [Email_Header_Analysis.md](./Email_Header_Analysis.md)  
+- Provides a structured walkthrough of analyzing email headers, identifying sender paths, verifying authentication fields (SPF, DKIM, DMARC), and interpreting routing information. Includes examples, an ASCII mail flow diagram, and step-by-step investigation logic.
 
-The goal of this section is to demonstrate applied blue-team skills that reflect the day-to-day work of a SOC analyst.
+---
+
+## Purpose of This Folder
+
+The content in this directory highlights applied SOC capabilities, including:
+
+- Investigating suspicious activity  
+- Interpreting telemetry and metadata  
+- Understanding how attacks move through communication channels  
+- Practicing analysis workflows common in Tier 1 SOC roles  
+
+Additional documents can be added as more SOC investigations, detections, and analysis exercises are completed.
