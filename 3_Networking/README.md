@@ -1,35 +1,28 @@
 # Networking
 
-This folder contains documentation related to core networking concepts that support cybersecurity, data center operations, and SOC analysis. Networking fundamentals are essential for understanding traffic flow, troubleshooting, protocol behavior, and the foundations of defensive security.
+This folder contains documentation covering foundational and intermediate networking concepts used in cybersecurity, SOC analysis, system administration, and data center operations. The materials here provide essential knowledge for understanding network behavior, packet flow, addressing, and secure communication.
 
-## 📄 Included Documents
+---
 
-(Links will be activated as documents are added.)
+## Documents in This Folder
 
-- **IPv4 Subnetting Overview**  
-  `IPv4_Subnetting_Overview.md`  
-  Breakdown of IPv4 addressing, network vs host bits, subnet masks, and examples of calculating subnets.
+### 1. IPv4 Subnetting Overview  
+**File:** [IPv4_Subnetting_Overview.md](./IPv4_Subnetting_Overview.md)  
+- Explains IPv4 address structure, subnet masks, CIDR notation, network and broadcast calculations, block sizes, and practical subnetting workflows.
 
-- **Additional Networking Topics**  
-  Future documents may include:  
-  - VLANs and trunking  
-  - Switching fundamentals  
-  - Routing basics  
-  - TCP/UDP protocol behavior  
-  - ARP, DHCP, DNS  
-  - Packet captures and analysis  
-  - NAT and PAT  
-  - Network troubleshooting workflows
+### 2. IPsec Overview  
+**File:** [IPsec_Overview.md](./IPsec_Overview.md)  
+- Covers the purpose and structure of IPsec, including AH vs ESP, transport vs tunnel mode, IKE phases, Security Associations (SAs), packet flow, and anti-replay protections.
 
-## 🎯 Purpose of This Folder
+---
 
-The purpose of this section is to demonstrate working knowledge of networking concepts commonly used in:
+## Purpose of This Folder
 
-- SOC analyst investigations  
-- Home lab and virtualization environments  
-- Data center technician work  
-- Penetration testing fundamentals  
-- Cybersecurity bootcamp exercises
+The documents in this directory support:
 
-Networking understanding is foundational across all technical roles in security and IT operations.
+- Building and understanding network topology  
+- Analyzing packet flow and protocol behavior  
+- Preparing for help desk, networking, SOC, or cybersecurity roles  
+- Strengthening fundamental knowledge used throughout the rest of the portfolio  
 
+Each file is designed to be clear, concise, and technically accurate, serving as both a learning reference and interview preparation resource.
