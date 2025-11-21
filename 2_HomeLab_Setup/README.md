@@ -1,54 +1,38 @@
 # Home Lab Setup
 
-This folder documents my cybersecurity home lab environment used for hands-on learning, safe testing, and practicing SOC and blue-team concepts.
-
-## 🖥 Lab Overview
-The lab is built around an isolated test network that includes:
-
-- **Kali Linux (attacker VM)**
-- **Xubuntu or Windows (victim VM)**
-- **VirtualBox or VMware Workstation**
-- **Managed switch + CAT6 cabling**
-- **Dedicated subnet for testing** (separate from home network)
-- **Local workstation used as the controller/analyst machine**
-
-This setup allows me to safely simulate attacks, monitor network behavior, and practice detection and response workflows.
+This folder contains documentation outlining the structure, components, and reference material used to build and operate a secure, isolated cybersecurity home lab. These resources support hands-on practice in networking, packet analysis, virtualization, and basic SOC investigation techniques.
 
 ---
 
-## 🛠 What This Lab Is Used For
+## Documents in This Folder
 
-### **🔍 Network Scanning & Recon**
-- Nmap scanning
-- Service and OS enumeration
-- Understanding open ports, protocols, and services
+### 1. Home Lab Architecture
+- **File:** [Home_Lab_Architecture.md](./Home_Lab_Architecture.md)  
+- Provides a high-level view of the lab environment, including topology diagrams, network adapter roles, VM isolation strategy, and recommended configurations for safe testing.
 
-### **📡 Traffic Capture & Analysis**
-- Packet capture using **Wireshark**
-- Investigating suspicious traffic
-- Understanding normal vs abnormal behavior
+### 2. OSI Model Overview
+- **File:** [OSI_Model.md](./OSI_Model.md)  
+- Summarizes the seven layers of the OSI model with examples, a comparison table, and an ASCII diagram. Useful for troubleshooting and understanding packet flow.
 
-### **🛡 SOC & Defensive Practice**
-- Windows Event Log and Sysmon analysis
-- Testing SIEM-like workflows (Wazuh, Splunk Free, or ELK Stack)
-- Observing attack patterns and log artifacts
+### 3. Common Network Ports
+- **File:** [Common_Network_Ports.md](./Common_Network_Ports.md)  
+- A concise reference of well-known ports, protocols, and services frequently encountered during network analysis and SOC workflows.
 
-### **⚔️ Safe Offensive Testing**
-- Brute forcing basics (Hydra)
-- Web vulnerability exploration (beginner-level)
-- Linux privilege escalation labs
-- Testing payloads in a controlled environment
+### 4. Wireshark Display Filters
+- **File:** [Wireshark_Filters.md](./Wireshark_Filters.md)  
+- A catalog of practical display filters for parsing traffic, identifying anomalies, narrowing investigations, and interpreting protocol behavior.
 
 ---
 
-## 📚 Documentation Included
-This folder will contain:
+## Purpose of This Folder
 
-- Network diagrams  
-- VM installation and configuration steps  
-- Switch and subnet settings  
-- Notes on isolation and safe lab practices  
-- Packet capture examples  
-- Lab scenarios and findings  
+The materials in this directory provide a technical foundation for:
 
-This lab is actively updated as I continue building hands-on skills in cybersecurity fundamentals, blue-team workflows, and introductory offensive security techniques.
+- Configuring an isolated cyber range or testing environment  
+- Practicing basic offensive and defensive techniques safely  
+- Understanding network behavior at multiple layers  
+- Analyzing packets using Wireshark  
+- Preparing for SOC, help desk, or entry-level cybersecurity roles  
+
+All files are written to be clear, practical, and suitable for interview preparation or hands-on practice.
+
