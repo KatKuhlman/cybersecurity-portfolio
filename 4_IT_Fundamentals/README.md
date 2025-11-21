@@ -1,39 +1,30 @@
 # IT Fundamentals
 
-This section provides core technical knowledge that supports all other areas of the portfolio.  
-It includes essential concepts across networking, hardware, operating systems, security, and general IT troubleshooting.  
-These fundamentals serve as the foundation for practical work in SOC analysis, home lab environments, penetration testing, and data center operations.
+This folder contains foundational IT concepts that apply across multiple areas of cybersecurity, networking, system administration, and data center operations. These documents provide essential baseline knowledge needed before moving into more specialized or hands-on sections of the portfolio.
 
 ---
 
-## Contents
+## Documents in This Folder
 
-- **Network_and_Security_Fundamentals.md**  
-  High-level technical overview covering terminology, device types, OS concepts, SOAR, playbooks, protocols, troubleshooting logic, and other foundational material.
+### 1. Network and Security Fundamentals  
+**File:** [Network_and_Security_Fundamentals.md](./Network_and_Security_Fundamentals.md)  
+- Covers essential IT and security concepts including device roles, OS fundamentals, SOAR/playbook structure, availability calculations, VLAN basics, troubleshooting workflows, and common protocols.
 
----
-
-## Purpose
-
-This folder consolidates baseline IT knowledge needed for:
-
-- Entry-level cybersecurity roles  
-- SOC Tier 1 analysis  
-- Data center and infrastructure positions  
-- Home lab building and virtualization  
-- Networking tasks and basic system administration  
-
-The goal of this section is to demonstrate a solid understanding of core IT principles that apply across multiple professional paths.
+### 2. Hardware Fundamentals  
+**File:** [Hardware_Fundamentals.md](./Hardware_Fundamentals.md)  
+- Provides a breakdown of core hardware components such as CPUs, RAM, storage types, PSUs, chipsets, buses, GPUs, BIOS/UEFI, POST behavior, monitoring tools, and hardware troubleshooting methods.
 
 ---
 
-## How to Use This Section
+## Purpose of This Folder
 
-Review the documents here before exploring:
+The materials in this directory establish baseline skills and terminology used throughout the rest of the portfolio.  
+They support learning, interview readiness, and practical work by reinforcing core concepts required for:
 
-- **3_Networking** (protocol specifics, subnetting, ports)  
-- **6_SOC_Practice** (log analysis and detection work)  
-- **7_TryHackMe_Writeups** (hands-on tactics and methodologies)  
-- **5_DataCenter_Fundamentals** (hardware, racks, cabling, storage)
+- SOC analyst tasks  
+- Home lab setup and VM configuration  
+- Networking fundamentals  
+- Data center technician responsibilities  
+- General IT and system troubleshooting  
 
-This ensures a strong knowledge base before diving into specialized or hands-on content.
+All documents follow the portfolio’s technical documentation standards and serve as reference material for both study and hands-on practice.
